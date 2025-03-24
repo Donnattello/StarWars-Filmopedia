@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Poller+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src="header.js" defer></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+
+</head>
+<body>
+  
+  <header class="header">
+    <ul class="mobileheader">    
+        <li><a href="index.html" class="header-text1">home</a></li>
+        <li><a href="katolog.html" class="header-text1">katalog</a></li>
+        <li><a href="moments.html" class="header-text1">momenty</a></li>
+        <li><a href="galeria.html" class="header-text1">galeria</a></li>
+        <li><a href="log.html" class="header-text1">zaloguj</a></li> 
+    </ul>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+  </header>
+  
+
+
+
+
+  <div class="katalog-main">
+    <img src="zdjecia/logo-black.png" alt="">
+    <div class="k-table">
+        
+        <table>
+            <tr>
+                <td class="k-t-ftext"> <a href="films.html" id="f1">Gwiezdne Wojny I: Mroczne widmo</a></td>
+                <td class="k-t-dtext"><h3>32 BBY</h3></td>
+                <td class="k-t-ftext">  </td>
+
+            </tr>
+            <tr>
+                <td class="k-t-ftext"><a href="films.html" id="f2">Gwiezdne Wojny II: Atak Klonów</a></td>
+                <td class="k-t-dtext"><h3>22 BBY</h3></td>
+                <td class="k-t-ftext"> </td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext" ><a href="films.html" id="f3">Gwiezdne Wojny III: Zemsta Sithów</a></td>
+                <td class="k-t-dtext"><h3>19 BBY</h3></td>
+                <td class="k-t-ftext">  </td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext">  </td>
+                <td class="k-t-dtext"><h3>13 BBY</h3></td>
+                <td class="k-t-ftext"  id="s2">Solo</td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext">  </td>
+                <td class="k-t-dtext"><h3>9 BBY</h3></td>
+                <td class="k-t-ftext">Obi-Wan Kenobi</td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext">  </td>
+                <td class="k-t-dtext"><h3>5 BBY</h3></td>
+                <td class="k-t-ftext">Andor</td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext"><a href="films.html">Gwiezdne Wojny IV: Nowa nadzieja</a></td>
+                <td class="k-t-dtext"><h3>0 BBY</h3></td>
+                <td class="k-t-ftext">"Rogue One"</td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext"><a href="films.html" id="f5">Gwiezdne Wojny V: Imperium Kontratakuje</a></td>
+                <td class="k-t-dtext"><h3>3 ABY</h3></td>
+                <td class="k-t-ftext">  </td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext"><a href="films.html" id="f6">Gwiezdne Wojny VI: Powrót Jedi</a></td>
+                <td class="k-t-dtext"><h3>4 ABY</h3></td>
+                <td class="k-t-ftext">  </td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext">  </td>
+                <td class="k-t-dtext"><h3>9 ABY</h3></td>
+                <td class="k-t-ftext">"The Mandalorian"<br> "Księga Boby Fetta"<br>"Ahsoka"  </td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext"><a href="films.html" id="f7">Gwiezdne Wojny VII: Przebudzenie Mocy</a></td>
+                <td class="k-t-dtext"><h3>34 ABY</h3></td>
+                <td class="k-t-ftext">  </td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext"><a href="films.html" id="f8">Gwiezdne Wojny VIII: Ostatni Jedi</a></td>
+                <td class="k-t-dtext"><h3>34 ABY</h3></td>
+                <td class="k-t-ftext">  </td>
+            </tr>
+            <tr>
+                <td class="k-t-ftext"><a href="films.html" id="f9">Gwiezdne Wojny IX: Skywalker. Odrodzenie</a></td>
+                <td class="k-t-dtext"><h3>35 ABY</h3></td>
+                <td class="k-t-ftext">  </td>
+            </tr>
+            
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    //   (jquery)
+        $(document).ready(function(){
+        $("a").click(function(e){
+        e.preventDefault(); // Zapobiega domyślnej akcji kliknięcia linku
+
+        // Pobierz wartość id z atrybutu id danego linku
+        var filmId = $(this).attr("id");
+        var czyClass = $(this).attr("class");
+        
+        if (czyClass !== "header-text1") {
+        // Przenieś się do strony films.html
+        window.location.href = "films.html?id=" + filmId;
+        }
+        else
+        {
+            var khref = $(this).attr("href");
+            window.location.href = khref ;
+        }
+    });
+    });
+</script>

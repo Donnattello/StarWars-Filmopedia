@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Poller+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
+    <script src="header.js" defer></script>
+
+    <STYLE>
+    body{
+        background-color: black;
+    }
+    .slider {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      height: 94vh;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100vw;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide img{
+      max-width: 100%  ;
+      height: auto;
+      
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 6vh;
+      cursor: pointer;
+      color: #b2b2b2;
+    }
+
+    .arrow.left {
+      left: 10px;
+      
+    }
+
+    .arrow.right {
+      right: 10px;  
+    }
+    </STYLE>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+</head>
+<body>
+  
+  <header class="header">
+    <ul class="mobileheader">    
+        <li><a href="index.html" class="header-text1">home</a></li>
+        <li><a href="katolog.html" class="header-text1">katalog</a></li>
+        <li><a href="moments.html" class="header-text1">momenty</a></li>
+        <li><a href="galeria.html" class="header-text1">galeria</a></li>
+        <li><a href="log.html" class="header-text1">zaloguj</a></li> 
+    </ul>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+  </header>
+  
+
+    <div class="slider">
+        <div class="slides">
+          <div class="slide"><img src="zdjecia/slide3.jpg" alt="Slide 1"></div>
+          <div class="slide"><img src="zdjecia/slide1.jpg" alt="Slide 2"></div>
+          <div class="slide"><img src="zdjecia/desert.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="zdjecia/milenium-falcon.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="zdjecia/slide5.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="zdjecia/slide4.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="zdjecia/slide6.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="zdjecia/slide7.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="zdjecia/slide8.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="zdjecia/slide9.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="zdjecia/slide.10.jpeg" alt="Slide 3"></div>
+
+          
+          <!-- Dodaj kolejne slajdy według potrzeb -->
+        </div>
+        <div class="arrow left">&#9665;</div>
+        <div class="arrow right">&#9655;</div>
+      </div>
+</body>
+</html>
+<script>
+            //  (js)
+            document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelector('.slides');
+            const slideItems = document.querySelectorAll('.slide');
+            const arrowLeft = document.querySelector('.arrow.left');
+            const arrowRight = document.querySelector('.arrow.right');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideItems.length;
+                showSlide(currentIndex);
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slideItems.length) % slideItems.length;
+                showSlide(currentIndex);
+            }
+
+            arrowLeft.addEventListener('click', prevSlide);
+            arrowRight.addEventListener('click', nextSlide);
+
+            // Automatyczna zmiana slajdów co 5 sekund
+            setInterval(nextSlide, 5000);
+        });
+</script>

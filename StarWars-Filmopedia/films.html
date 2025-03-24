@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>film</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Poller+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
+    <script src="header.js" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+
+</head>
+<body>
+    
+  <header class="header">
+    <ul class="mobileheader">    
+        <li><a href="index.html" class="header-text1">home</a></li>
+        <li><a href="katolog.html" class="header-text1">katalog</a></li>
+        <li><a href="moments.html" class="header-text1">momenty</a></li>
+        <li><a href="galeria.html" class="header-text1">galeria</a></li>
+        <li><a href="log.html" class="header-text1">zaloguj</a></li> 
+    </ul>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+  </header>
+  
+
+   
+    <div class="f-conteiner">
+        <div >
+            <img src="zdjecia/Ep-4.jpeg" alt="poster">
+        </div>
+        <div class="f-information">
+            <h1>Gwiezdne Wojny IV: Nowa nadzieja</h1>
+            <hr>
+            
+            <h3><strong>Data wydania: </strong></h3><h4>1977r.</h4>
+            <h3><strong>Czas trwania: </strong></h3>  <h4>121 min</h4>
+            <h3><strong>Gatunek: </strong></h3><h4>akcja, przygoda, fantasy, science fiction</h4>
+            <h3><strong>Główne role: </strong></h3><h4>Mark Hamill, Harrison Ford, Mark Hamill, Harrison Ford, Carrie Fisher, Alec Guinness, Peter Cushing</h4>
+            
+            <p>Dziewiętnaście lat po powstaniu Imperium Luke zostaje wciągnięty w walkę Sojuszu Rebeliantów, kiedy spotyka Obi-Wana Kenobiego, który od lat żyje w odosobnieniu na pustynnej planecie Tatooine. Obi-Wan rozpoczyna szkolenie Luke'a na Jedi, a Luke dołącza do niego w śmiałej misji uratowania pięknej przywódczyni Rebeliantów, księżniczki Lei, ze szponów Dartha Vadera i złego Imperium.</p>
+            <h3><strong>Era: </strong></h3><h4>Wiek Rebelii</h4>
+            <div class="radio-input">
+              <input value="value-1" name="value-radio" id="value-1" type="radio" class="star s1">
+              <input value="value-2" name="value-radio" id="value-2" type="radio" class="star s2">
+              <input value="value-3" name="value-radio" id="value-3" type="radio" class="star s3">
+              <input value="value-4" name="value-radio" id="value-4" type="radio" class="star s4">
+              <input value="value-5" name="value-radio" id="value-5" type="radio" class="star s5">
+            </div>
+        </div>
+
+    </div>
+   
+
+</body>
+</html>
+<script>
+  //   (jquery)
+      $(document).ready(function(){
+      // Pobiera wartość id z parametru w adresie URL
+      var urlParams = new URLSearchParams(window.location.search);
+      var filmId = urlParams.get('id');
+      
+      // Dostosuje zawartość w zależności od wartości id
+      if (filmId === "f1") {
+        
+        $("img").attr("src", "zdjecia/Ep-1.jpg");
+        $("h1").text("Gwiezdne Wojny I: Mroczne widmo");
+        $("h4:eq(0)").text("1999r.");
+        $("h4:eq(1)").text("131min");
+        $("h4:eq(2)").text("akcja, space fantasy, space opera");
+        $("h4:eq(3)").text("Liam Neeson, Jake Lloyd, Ewan McGregor,Natalie Portman");
+        $("p").text("Uwięziony na pustynnej planecie Tatooine po uratowaniu młodej królowej Amidali przed zbliżającą się inwazją na Naboo, uczeń Jedi Obi-Wan Kenobi i jego mistrz Jedi Qui-Gon Jinn odkrywają dziewięcioletniego Anakina, młodego niewolnika niezwykle silnego w Mocy. Anakin wygrywa ekscytujący Podrace, a wraz z nim wolność, opuszczając dom, aby szkolić się na Jedi. Bohaterowie wracają na Naboo, gdzie Anakin i Królowa stawiają czoła ogromnym siłom inwazyjnym, podczas gdy dwaj Jedi walczą ze śmiercionośnym wrogiem imieniem Darth Maul.");
+        $("h4:eq(4)").text("Upadek Jedi");
+      }
+      if (filmId === "f2") {
+        // Przykładowe dane dla id "fi"
+        $("img").attr("src", "zdjecia/Ep-2.jpg");
+        $("h1").text("Gwiezdne Wojny II: Atak Klonów");
+        $("h4:eq(0)").text("2002r.");
+        $("h4:eq(1)").text("142min");
+        $("h4:eq(2)").text("akcja,  space opera, przygoda, fantasy");
+        $("h4:eq(3)").text("Ewan McGregor, Hayden Christensen , Natalie Portman");
+        $("p").text("Dziesięć lat po inwazji na Naboo galaktyka znajduje się na krawędzi wojny domowej. Pod przywództwem zbuntowanego Jedi, hrabiego Dooku, tysiące układów słonecznych grozi oderwaniem się od Republiki Galaktycznej. Kiedy zostaje podjęta próba zamachu na senator Padmé Amidalę, byłą królową Naboo, dwudziestoletni uczeń Jedi Anakin Skywalker zostaje wyznaczony do jej ochrony. W trakcie swojej misji Anakin odkrywa swoją miłość do Padmé, a także swoją mroczniejszą stronę. Wkrótce Anakin, Padmé i Obi-Wan Kenobi zostają wciągnięci w samo serce ruchu Separatystów i początek Wojen Klonów.");
+        $("h4:eq(4)").text("Upadek Jedi");
+      }
+      if (filmId === "f3") {
+        // Przykładowe dane dla id "fi"
+        $("img").attr("src", "zdjecia/Ep-3.jpg");
+        $("h1").text("Gwiezdne Wojny III: Zemsta Sithów");
+        $("h4:eq(0)").text("2005r.");
+        $("h4:eq(1)").text("140min");
+        $("h4:eq(2)").text("akcja");
+        $("h4:eq(3)").text("Ewan McGregor, Hayden Christensen , Natalie Portman");
+        $("p").text("Wiele lat po rozpoczęciu Wojen Klonów szlachetni Rycerze Jedi prowadzą potężną armię klonów do ogólnogalaktycznej bitwy przeciwko Separatystom. Kiedy złowrogi Sith odkrywa tysiącletni spisek mający na celu władzę nad galaktyką, Republika rozpada się, a z popiołów powstaje złe Imperium Galaktyczne. Bohater Jedi Anakin Skywalker zostaje uwiedziony przez ciemną stronę Mocy i zostaje nowym uczniem Imperatora – Darthem Vaderem. Jedi zostają zdziesiątkowani, gdy Obi-Wan Kenobi i Mistrz Jedi Yoda zmuszeni są się ukrywać.");
+        $("h4:eq(4)").text("Upadek Jedi");
+      }
+      if (filmId === "f5") {
+        // Przykładowe dane dla id "fi"
+        $("img").attr("src", "zdjecia/Ep-5.jpeg");
+        $("h1").text("Gwiezdne Wojny V: Imperium Kontratakuje");
+        $("h4:eq(0)").text("1985r.");
+        $("h4:eq(1)").text("124min");
+        $("h4:eq(2)").text("space opera, space fantasy");
+        $("h4:eq(3)").text("Mark Hamill, Harrison Ford, Carrie Fisher, David Prowse");
+        $("p").text("Po zniszczeniu Gwiazdy Śmierci siły imperialne kontynuują pościg za Rebeliantami. Po klęsce Rebelii na lodowej planecie Hoth Luke udaje się na planetę Dagobah, aby trenować z Mistrzem Jedi Yodą, który żyje w ukryciu od upadku Republiki. Próbując nawrócić Luke'a na ciemną stronę, Darth Vader zwabia młodego Skywalkera w pułapkę w Mieście w Chmurach Bespin.");
+        $("h4:eq(4)").text("Wiek Rebelii");
+      }
+      if (filmId === "f6") {
+        // Przykładowe dane dla id "fi"
+        $("img").attr("src", "zdjecia/Ep-6.jpeg");
+        $("h1").text("Gwiezdne Wojny VI: Powrót Jedi");
+        $("h4:eq(0)").text("1983r.");
+        $("h4:eq(1)").text("133min");
+        $("h4:eq(2)").text("akcja");
+        $("h4:eq(3)").text("Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams, Ian McDiarmid");
+        $("p").text("Po krótkiej podróży powrotnej na Tatooine Luke Skywalker, Leia Organa i Han Solo spotykają się ponownie i dołączają do gromadzącej się floty rebeliantów, aby raz na zawsze zniszczyć złe Imperium. Ale Imperium też knuje. Imperator Palpatine dowodzi swoimi żołnierzami na pokładzie nowo skonstruowanej Gwiazdy Śmierci, stacjonującej nad leśnym księżycem Endor, gdzie rebelianci – i kilku nieoczekiwanych futrzanych przyjaciół – stawiają czoła Imperium. Podczas gdy Luke Skywalker ponownie konfrontuje się z Darthem Vaderem na Gwieździe Śmierci, Han prowadzi zespół, który ma zniszczyć tarczę chroniącą stację bojową, aby flota rebeliantów mogła ją ponownie zniszczyć i ostatecznie położyć kres wojnie…");
+        $("h4:eq(4)").text("Wiek Rebelii");
+      }
+      if (filmId === "f7") {
+        // Przykładowe dane dla id "fi"
+        $("img").attr("src", "zdjecia/Ep-7.jpeg");
+        $("h1").text("Gwiezdne Wojny VII: Przebudzenie Mocy");
+        $("h4:eq(0)").text("2015r.");
+        $("h4:eq(1)").text("135 min");
+        $("h4:eq(2)").text("akcja");
+        $("h4:eq(3)").text("Daisy Ridley, John Boyega, Adam Driver, Harrison Ford, Oscar Isaac, Peter Mayhew, Domhnall Gleeson, Carrie Fisher, Max von Sydow");
+        $("p").text("Trzydzieści lat od zniszczenia drugiej Gwiazdy Śmierci złowrogi Najwyższy Porządek, dowodzony przez tajemniczego Snoke'a i ucznia Kylo Rena, powstaje z popiołów Imperium. Ruch oporu, dowodzony przez generał Leię Organę, próbuje udaremnić zagrożenie ze strony Najwyższego Porządku, ale rozpaczliwie potrzebuje pomocy. Rey, pustynny padlinożerca, i Finn, były szturmowiec, łączą siły z Hanem Solo i Chewbaccą w desperackiej misji mającej na celu zwrócenie droidowi jednostki BB z mapą Luke'a Skywalkera z powrotem do Ruchu Oporu.");
+        $("h4:eq(4)").text("Narodziny Najwyższego Porządku");
+      }
+      if (filmId === "f8") {
+        // Przykładowe dane dla id "fi"
+        $("img").attr("src", "zdjecia/Ep-8.jpeg");
+        $("h1").text("Gwiezdne Wojny VIII: Ostatni Jedi");
+        $("h4:eq(0)").text("2017r.");
+        $("h4:eq(1)").text("152min");
+        $("h4:eq(2)").text("space fantasy, space opera");
+        $("h4:eq(3)").text("Daisy Ridley, John Boyega, Adam Driver, Oscar Isaac, Andy Serkis");
+        $("p").text("Ruch Oporu desperacko potrzebuje pomocy, gdy Najwyższy Porządek ściga ich w niemożliwy sposób. Podczas gdy Rey udaje się na odległą planetę Ahch-To, aby zrekrutować Luke’a Skywalkera do Ruchu Oporu, Finn i Rose, mechanicy, wyruszają na własną misję w nadziei, że pomogą Ruchowi Oporu w końcu uciec przed Najwyższym Porządkiem. Ale wszyscy trafiają na solną planetę Crait, aby stawić czoła ostatkowi.");
+        $("h4:eq(4)").text("Narodziny Najwyższego Porządku");
+      }
+      if (filmId === "f9") {
+        // Przykładowe dane dla id "fi"
+        $("img").attr("src", "zdjecia/Ep-9.jpeg");
+        $("h1").text("Gwiezdne Wojny IX: Skywalker. Odrodzenie");
+        $("h4:eq(0)").text("2019r.");
+        $("h4:eq(1)").text("142min");
+        $("h4:eq(2)").text("akcja");
+        $("h4:eq(3)").text("Daisy Ridley, John Boyega, Adam Driver, Oscar Isaac, Billy Dee Williams, Carrie Fisher, Mark Hamill");
+        $("p").text("Lucasfilm i reżyser JJ Abrams ponownie łączą siły, aby zabrać widzów w epicką podróż do odległej galaktyki dzięki Star Wars: The Rise of Skywalker, porywającemu zakończeniu przełomowej sagi Skywalkerów, w której narodzą się nowe legendy i ostateczna bitwa o wolność jeszcze przed nami.");
+        $("h4:eq(4)").text("Narodziny Najwyższego Porządku");
+      }
+      
+    });
+  </script>
